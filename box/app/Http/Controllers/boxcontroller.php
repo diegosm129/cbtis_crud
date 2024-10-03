@@ -54,7 +54,7 @@ class boxcontroller extends Controller
     
     public function edit(box $guante)
     {
-        
+        return view('box.edit', compact('guante'));
     }
 
     

@@ -16,7 +16,7 @@ Route::post('/box/store',[boxcontroller::class, 'store'])->name('box.store');
 
 Route::get('/box/{guante}', [boxcontroller::class, 'show'])->name('box.show');
 
-Route::patch('box/{guante}/edit',[boxcontroller::class, 'edit'])->name('box.edit');
+Route::get('box/{guante}/edit',[boxcontroller::class, 'edit'])->name('box.edit');
 
 Route::patch('box/{guante}/update',[boxcontroller::class, 'update'])->name('box.update');
 
