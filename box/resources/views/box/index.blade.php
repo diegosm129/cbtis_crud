@@ -16,6 +16,7 @@
                 <th scope="col">ID</th>
                 <th scope="col">color</th>
                 <th scope="col">Peso</th>
+                <th scope="col">Marca</th>
                 <th scope="col">Precio</th>
                 <th scope="col">Descripcion</th>
                 <th scope="col"></th>  
@@ -24,17 +25,19 @@
         <tbody>
             @foreach($guantes as $guante)
             <tr>
-                <th scope="row">{{guante->id}}</th>
+                <th scope="row">{{$guante->id}}</th>
                 <td>{{$guante->color}}</td>
                 <td>{{$guante->peso}}</td>
+                <td>{{$guante->marca}}</td>
                 <td>{{$guante->precio}}</td>
                 <td>{{$guante->descripcion}}</td>
 
 
                 <td>
-                    <a href="{{ route('guantes.show', $guante->id) }}" class="btn btn-primary">View</a>
-                    <a href="{{ route('guantes.edit', $guante->id) }}" class="btn btn-primary">Edit</a>
-                    <form action="{{route('guantes.destroy', $guante->id) }}" method="POST">
+                    <a href="{{ route('box.show', $guante->id) }}" class="btn btn-primary">View</a>
+                    <a href="{{ route('box.edit', $guante->id) }}" class="btn btn-primary">Edit</a>
+                    <form action="{{route('box.destroy', $guante->id)}}" method="POST" class="d-inline">
+                    <form action="{{route('box.destroy', $guante->id) }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>
