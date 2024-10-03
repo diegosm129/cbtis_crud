@@ -44,9 +44,11 @@ class boxcontroller extends Controller
     }
 
     
-    public function show(string $id)
+    public function show(box $guante)
     {
-        //
+
+        return view('box.show', compact('guante'));
+        
     }
 
     
