@@ -23,7 +23,8 @@
             <label for="precio" class="form-label">precio</label>
             <textarea class="form-control" id="precio" placeholder="precio" ></textarea>
         </div>
-        <button type="submit" class="btn btn-primary"><i class="bi bi-guardar"></i>Agregar</button>
+        <button type="submit" class="btn btn-primary"><i class="bi bi-save"></i>Agregar</button>
+        <a href= "{{ route('box.index')}}" class="btn btn-secondary"><i class="bi bi-arrow-left"></i>Regresar</a>
     </form>
 
 </div>
